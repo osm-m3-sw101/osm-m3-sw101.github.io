@@ -134,7 +134,7 @@
             <div class="row g-3">
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="menu-card h-100" onclick="updateHash('category', 'รณรงค์ลูกน้ำยุงลาย')">
-                        <img src="https://images.unsplash.com/photo-1500693994347-19e644b92b6c?w=500&auto=format&fit=crop&q=60" alt="ยุงลาย" onerror="this.src='https://via.placeholder.com/300x180?text=Mosquito'">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Aedes_aegypti.jpg/640px-Aedes_aegypti.jpg" alt="ยุงลาย" onerror="this.src='https://via.placeholder.com/300x180?text=Mosquito'">
                         <div class="card-body"><h6 class="fw-bold text-danger mb-2">รณรงค์ลูกน้ำยุงลาย</h6><p class="text-secondary m-0" style="font-size: 0.8rem; line-height: 1.4;">อันตรายจากยุงลาย! เป็นพาหะไข้เลือดออก ร่วมมือกันกำจัดแหล่งเพาะพันธุ์ "3 เก็บ ป้องกัน 3 โรค"</p></div>
                     </div>
                 </div>
@@ -174,11 +174,9 @@
         </div>
         <div id="detail-view" class="app-view">
             <div class="top-nav-bar"><button class="back-btn-pill" onclick="backToCategory()"><i class="bi bi-chevron-left"></i> ย้อนกลับ</button></div>
-            
             <div class="detail-image-wrapper">
                 <img id="detail-cover-img" src="" class="detail-cover" style="display:none;">
             </div>
-
             <div class="card border-0 shadow-sm mb-4 bg-white rounded-3 position-relative" style="margin-top: -20px; z-index: 2;">
                 <div class="card-body p-4">
                     <h4 id="detail-title" class="fw-bold text-dark mb-2"></h4>
@@ -401,10 +399,10 @@
         }
 
         function getCoverImage(category, userImage) {
-            // ✅ แก้รูปยุงลาย และหมวดอื่นๆ ให้ถูกต้อง
+            // ✅ แก้รูปยุงลายในระบบ JS ด้วย (เผื่อการ์ดในหน้าหมวดหมู่)
             if (userImage && userImage.trim() !== '') return userImage;
             switch(category) {
-                case 'รณรงค์ลูกน้ำยุงลาย': return 'https://images.unsplash.com/photo-1500693994347-19e644b92b6c?w=500&auto=format&fit=crop&q=60'; // รูปยุงจริง
+                case 'รณรงค์ลูกน้ำยุงลาย': return 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Aedes_aegypti.jpg/640px-Aedes_aegypti.jpg'; // รูปยุงจริงจาก Wiki
                 case 'เยี่ยมบ้านผู้สูงอายุ': return 'https://images.unsplash.com/photo-1584515933487-779824d29309?w=400';
                 case 'กิจกรรมช่วยเหลือชุมชน': return 'https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400';
                 case 'ประชุมประจำเดือน': return 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=400';
